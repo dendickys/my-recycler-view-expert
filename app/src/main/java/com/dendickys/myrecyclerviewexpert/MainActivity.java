@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         list.addAll(HeroesData.getListData());
         showRecyclerList();
         showRecyclerGrid();
+        showRecyclerCardView();
     }
 
     private void showRecyclerList() {
@@ -40,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         rvHeroes.setLayoutManager(new GridLayoutManager(this, 2));
         GridHeroAdapter gridHeroAdapter = new GridHeroAdapter(list);
         rvHeroes.setAdapter(gridHeroAdapter);
+    }
+
+    private void showRecyclerCardView() {
+        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
+        CardViewHeroAdapter cardViewHeroAdapter = new CardViewHeroAdapter(list);
+        rvHeroes.setAdapter(cardViewHeroAdapter);
     }
 
     @Override
@@ -63,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 showRecyclerGrid();
                 break;
             case R.id.action_cardview:
+                showRecyclerCardView();
                 break;
         }
     }
