@@ -33,7 +33,7 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
 
     @Override
     public void onBindViewHolder(@NonNull final CardViewViewHolder holder, int position) {
-        Hero hero = new Hero();
+        Hero hero = listHero.get(position);
 
         Glide.with(holder.itemView.getContext())
                 .load(hero.getPhoto())
