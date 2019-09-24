@@ -47,12 +47,6 @@ public class MainActivity extends AppCompatActivity {
             }
             setMode(stateMode);
         }
-
-        setActionBarTitle(title);
-        list.addAll(HeroesData.getListData());
-        showRecyclerList();
-        showRecyclerGrid();
-        showRecyclerCardView();
     }
 
     private void showRecyclerList() {
@@ -60,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         ListHeroAdapter listHeroAdapter = new ListHeroAdapter(list);
         rvHeroes.setAdapter(listHeroAdapter);
 
-        /*istHeroAdapter.setOnItemClickCallback(new ListHeroAdapter.OnItemClickCallback() {
+        /*ListHeroAdapter.setOnItemClickCallback(new ListHeroAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(Hero data) {
                 showSelectedHero(data);
