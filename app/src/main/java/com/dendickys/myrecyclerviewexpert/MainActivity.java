@@ -54,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
         ListHeroAdapter listHeroAdapter = new ListHeroAdapter(list);
         rvHeroes.setAdapter(listHeroAdapter);
 
-        /*ListHeroAdapter.setOnItemClickCallback(new ListHeroAdapter.OnItemClickCallback() {
+        listHeroAdapter.setOnItemClickCallback(new ListHeroAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(Hero data) {
                 showSelectedHero(data);
             }
-        });*/
+        });
     }
 
     private void showRecyclerGrid() {
@@ -67,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
         GridHeroAdapter gridHeroAdapter = new GridHeroAdapter(list);
         rvHeroes.setAdapter(gridHeroAdapter);
 
-        /*gridHeroAdapter.setOnItemClickCallback(new GridHeroAdapter.OnItemClickCallback() {
+        gridHeroAdapter.setOnItemClickCallback(new GridHeroAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(Hero data) {
                 showSelectedHero(data);
             }
-        });*/
+        });
     }
 
     private void showRecyclerCardView() {
