@@ -46,11 +46,11 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
         return listHero.size();
     }
 
-    public class ListViewHolder extends RecyclerView.ViewHolder {
+    class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
         TextView tvName, tvFrom;
 
-        public ListViewHolder(@NonNull View itemView) {
+        ListViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
