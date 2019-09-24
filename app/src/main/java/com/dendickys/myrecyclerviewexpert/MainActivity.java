@@ -16,11 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView rvHeroes;
     private ArrayList<Hero> list = new ArrayList<>();
+    private String title = "Mode List";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setActionBarTitle(title);
 
         rvHeroes = findViewById(R.id.rv_heroes);
         rvHeroes.setHasFixedSize(true);
@@ -49,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
         rvHeroes.setAdapter(cardViewHeroAdapter);
     }
 
+    private void setActionBarTitle(String title) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -64,12 +73,15 @@ public class MainActivity extends AppCompatActivity {
     private void setMode(int selectedMode) {
         switch (selectedMode) {
             case R.id.action_list:
+                title = "Mode List";
                 showRecyclerList();
                 break;
             case R.id.action_grid:
+                title = "Mode Grid";
                 showRecyclerGrid();
                 break;
             case R.id.action_cardview:
+                title = "Mode CardView";
                 showRecyclerCardView();
                 break;
         }

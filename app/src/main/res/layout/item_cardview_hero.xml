@@ -35,7 +35,7 @@
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@id/img_item_photo"
             android:ellipsize="end"
-            android:maxLines="5"
+            android:maxLines="4"
             tools:text="@string/description" />
 
         <TextView
